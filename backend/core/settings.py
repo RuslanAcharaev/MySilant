@@ -202,5 +202,6 @@ SPECTACULAR_SETTINGS = {
                 'description': 'Введите JWT токен'
             }
         }
-    }
+    },
+    'SCHEMA_PATH_PREFIX': '/api',
 }
