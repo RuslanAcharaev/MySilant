@@ -25,7 +25,7 @@ export const authService = {
             const response = await refreshApi.post(`/token/refresh/`, {
                 refresh: refreshToken
             });
-            console.log(response)
+            // console.log(response)
             return response.data;
         } catch (error) {
             throw new Error(error.response?.data?.error || 'Ошибка обновления токена');

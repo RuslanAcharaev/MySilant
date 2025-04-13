@@ -4,9 +4,9 @@ import {formatDate} from "../utils/formatters.js";
 export const infoService = {
     async getVehicle(factoryNumber) {
         try {
-            console.log(`0.0.1 Начало получения информации о машине с номером ${factoryNumber}`);
+            // console.log(`0.0.1 Начало получения информации о машине с номером ${factoryNumber}`);
             const response = await api.get(`/vehicles/${factoryNumber}/`);
-            console.log('0.0.2 Информация получена: ', response.data);
+            // console.log('0.0.2 Информация получена: ', response.data);
             return response.data;
         } catch (error) {
             throw new Error(error.status === 404

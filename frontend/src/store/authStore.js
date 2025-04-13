@@ -53,7 +53,7 @@ const useAuthStore = create(
                 const {setLoading, setToken, setError, setUser} = get();
 
                 try {
-                    console.log('0.1 Начало авторизации')
+                    // console.log('0.1 Начало авторизации')
                     setLoading(true);
                     setError(null);
 
@@ -62,15 +62,15 @@ const useAuthStore = create(
                     });
                     setToken(response.access, response.refresh, response.access_expires_at, response.refresh_expires_at);
                     setUser(response.user.username, response.user.role, response.user.fullname);
-                    console.log('0.2 Авторизация пройдена: ', {
-                        token: response.access,
-                        refresh: response.refresh,
-                        username: response.user.username,
-                        role: response.user.role,
-                        fullname: response.user.fullname,
-                        token_expires: response.access_expires_at,
-                        refresh_expires: response.refresh_expires_at,
-                    })
+                    // console.log('0.2 Авторизация пройдена: ', {
+                    //     token: response.access,
+                    //     refresh: response.refresh,
+                    //     username: response.user.username,
+                    //     role: response.user.role,
+                    //     fullname: response.user.fullname,
+                    //     token_expires: response.access_expires_at,
+                    //     refresh_expires: response.refresh_expires_at,
+                    // })
                 } catch (error) {
                     setError(error.message);
                     return {
@@ -88,15 +88,15 @@ const useAuthStore = create(
                 const {setRefresh, setError} = get();
 
                 try {
-                    console.log('9.1 Начало обновления токена. Текущий refreshToken:', refreshToken);
+                    // console.log('9.1 Начало обновления токена. Текущий refreshToken:', refreshToken);
                     setError(null);
 
                     const response = await authService.refresh(refreshToken);
                     setRefresh(response.access, response.access_expires_at);
-                    console.log('9.2 Обновление прошло успешно:', {
-                        'Токен: ': response.access,
-                        'Истекает: ': new Date(response.access_expires_at * 1000),
-                    })
+                    // console.log('9.2 Обновление прошло успешно:', {
+                    //     'Токен: ': response.access,
+                    //     'Истекает: ': new Date(response.access_expires_at * 1000),
+                    // })
                 } catch (error) {
                     setError(error.message);
                     return false;
