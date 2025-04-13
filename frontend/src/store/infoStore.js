@@ -53,7 +53,7 @@ const useInfoStore = create(
                     setGeneralInfoLoading(true);
 
                     const response = await infoService.getVehicles();
-                    console.log('1.2 Получена общая информация: ', response);
+                    // console.log('1.2 Получена общая информация: ', response);
                     setGeneralInfo(response);
                     setUniqueVehicles(getUniqueVehicles(response));
                 } catch (error) {
@@ -142,7 +142,7 @@ const useInfoStore = create(
                     setComplaintsInfoLoading(true);
 
                     const response = await infoService.getComplaints();
-                    console.log('3.2 Получена информация о рекламациях: ', response);
+                    // console.log('3.2 Получена информация о рекламациях: ', response);
                     setComplaintsInfo(response);
                 } catch (error) {
                     setComplaintsInfoError(error);
@@ -179,7 +179,7 @@ const useInfoStore = create(
                     setReferenceBooksError(null);
 
                     const response = await infoService.getReferenceBooks();
-                    console.log('4.2 Получена информация о справочниках: ', response);
+                    // console.log('4.2 Получена информация о справочниках: ', response);
                     setReferenceBooks(response);
                 } catch (error) {
                     setReferenceBooksError(error);
@@ -214,7 +214,7 @@ const useInfoStore = create(
                     setServiceOrganizationsError(null);
 
                     const response = await infoService.getServiceOrganizations();
-                    console.log('5.2 Получена информация о сервисных организациях: ', response);
+                    // console.log('5.2 Получена информация о сервисных организациях: ', response);
                     setServiceOrganizations(response);
                 } catch (error) {
                     setServiceOrganizationsError(error);
@@ -232,7 +232,7 @@ const useInfoStore = create(
                     setClientsError(null);
 
                     const response = await infoService.getClients();
-                    console.log('7.2 Получена информация о клиентах: ', response);
+                    // console.log('7.2 Получена информация о клиентах: ', response);
                     setClients(response);
                 } catch (error) {
                     setClientsError(error);
@@ -243,9 +243,9 @@ const useInfoStore = create(
             },
 
             clearInfoStore: () => {
-                console.log('6.1 Начало очистки info-store')
+                // console.log('6.1 Начало очистки info-store')
                 set(initialState);
-                console.log('6.2 Info-store успешно очищен')
+                // console.log('6.2 Info-store успешно очищен')
             },
         }),
         {
