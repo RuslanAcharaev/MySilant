@@ -132,6 +132,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://frontend:3000",
     "http://176.108.253.166:3000",
+    "http://176.108.253.166",
 ]
 
 SIMPLE_JWT = {
