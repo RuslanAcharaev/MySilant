@@ -2,7 +2,8 @@ import axios from 'axios';
 import {useAuthStore} from "../store/authStore.js";
 import {authService} from "../service/authService.js";
 
-export const API_URL = 'http://127.0.0.1:8000/api';
+// export const API_URL = 'http://127.0.0.1:8000/api';
+export const API_URL = 'http://176.108.253.166:8000/api';
 
 const api = axios.create({
     baseURL: API_URL,
